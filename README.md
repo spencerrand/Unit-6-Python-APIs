@@ -30,7 +30,7 @@ import gzip
 # Set the seaborn chart style
 sns.set()
 
-# Increase the size of the bubble charts
+# Increase the size of the scatter plots
 plt.rcParams["figure.figsize"] = [10,8]
 ```
 
@@ -73,7 +73,7 @@ pprint(owm.get_current(2172797, **settings))
 ```python
 # This section downloads the list of cities and IDs that OpenWeatherMap uses from their website
 # Decided this was more efficient than creating a list of cities using citipy and 
-#  latitudes/longitudes since OpenWeatherMap says results will be more accurate if you use IDs instead of names
+#   latitudes/longitudes since OpenWeatherMap says results will be more accurate if you use IDs instead of names
 
 # File names
 city_index_zip_file = "city.list.json.gz"
