@@ -18,6 +18,7 @@ from config import api_key
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import datetime
 
 # Wrapper for OpenWeatherMap
 # Will use this to view sample JSON API response
@@ -32,6 +33,9 @@ sns.set()
 
 # Increase the size of the scatter plots
 plt.rcParams["figure.figsize"] = [10,8]
+
+# Store today's date
+date = datetime.datetime.now().strftime("%m-%d-%Y")
 ```
 
 
@@ -45,26 +49,26 @@ pprint(owm.get_current(2172797, **settings))
      'clouds': {'all': 75},
      'cod': 200,
      'coord': {'lat': -16.92, 'lon': 145.77},
-     'dt': 1522018800,
+     'dt': 1522231200,
      'id': 2172797,
-     'main': {'humidity': 88,
-              'pressure': 1005,
+     'main': {'humidity': 94,
+              'pressure': 1009,
               'temp': 78.8,
               'temp_max': 78.8,
               'temp_min': 78.8},
      'name': 'Cairns',
      'sys': {'country': 'AU',
              'id': 8166,
-             'message': 0.0035,
-             'sunrise': 1521922906,
-             'sunset': 1521966203,
+             'message': 0.0039,
+             'sunrise': 1522182131,
+             'sunset': 1522225289,
              'type': 1},
      'visibility': 10000,
-     'weather': [{'description': 'shower rain',
+     'weather': [{'description': 'light intensity shower rain',
                   'icon': '09n',
-                  'id': 521,
+                  'id': 520,
                   'main': 'Rain'}],
-     'wind': {'deg': 160, 'speed': 8.05}}
+     'wind': {'deg': 150, 'speed': 5.82}}
     
 
 <h1>Download City List</h1>
@@ -245,1116 +249,1116 @@ random_city_df['cloudiness'] = city_cloudiness_list
 random_city_df['windspeed'] = city_windspeed_list
 ```
 
-    Request 1 of 555: Tembalang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7035295
-    Request 2 of 555: Farvagny-le-Grand
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2660818
-    Request 3 of 555: Feusisberg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285816
-    Request 4 of 555: La Playona
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3607146
-    Request 5 of 555: Naples Park
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4165576
-    Request 6 of 555: Rollingwood
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5388611
-    Request 7 of 555: Saint-Joseph-de-RiviÃ¨re
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6433355
-    Request 8 of 555: Lieboch
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7873406
-    Request 9 of 555: Weitersbach
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6553651
-    Request 10 of 555: Zmeinogorsk
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1485042
-    Request 11 of 555: DÃºbravka
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3060322
-    Request 12 of 555: Kelcyre
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=782843
-    Request 13 of 555: Tabonuea Village
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2110099
-    Request 14 of 555: Gerstetten
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6555568
-    Request 15 of 555: Noord-Scharwoude
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2749835
-    Request 16 of 555: Taichung
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1668399
-    Request 17 of 555: Buti
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3181351
-    Request 18 of 555: Dahu
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1814288
-    Request 19 of 555: Larchamp
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3007044
-    Request 20 of 555: Villa Urquiza
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3433775
-    Request 21 of 555: Hopetoun
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2163168
-    Request 22 of 555: El Paisnal
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3586204
-    Request 23 of 555: Pie de la Cuesta
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3521553
-    Request 24 of 555: Divotino
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6459176
-    Request 25 of 555: Tighenif
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2476700
-    Request 26 of 555: Oppeide
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7626399
-    Request 27 of 555: Unterviehhausen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2818504
-    Request 28 of 555: Hengshui
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1808392
-    Request 29 of 555: Krugersdorp West
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=986820
-    Request 30 of 555: Pendolo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1631552
-    Request 31 of 555: Charnay-les-Macon
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3026534
-    Request 32 of 555: Saint-Martin-d'Aubigny
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6435614
-    Request 33 of 555: Frederickton
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2166113
-    Request 34 of 555: Neuss
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2864118
-    Request 35 of 555: Lockeport
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6058237
-    Request 36 of 555: Lockwisch
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2876523
-    Request 37 of 555: Fort Hancock
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5521724
-    Request 38 of 555: Black Lick
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5180709
-    Request 39 of 555: Clara
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=681343
-    Request 40 of 555: Amnat Charoen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1621060
-    Request 41 of 555: Hohenhameln
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2901731
-    Request 42 of 555: Grave
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2755358
-    Request 43 of 555: Sogod
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1685915
-    Request 44 of 555: TÃ rrega
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6358945
-    Request 45 of 555: Brampton
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2654919
-    Request 46 of 555: Park Place
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5205105
-    Request 47 of 555: Lillard Park
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4541040
-    Request 48 of 555: Abezames
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362449
-    Request 49 of 555: Queige
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2984848
-    Request 50 of 555: Shuto Orizari
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=833258
-    Request 51 of 555: Balestrate
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2525609
-    Request 52 of 555: Ã‰chirolles
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6433192
-    Request 53 of 555: Waupun
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5278106
-    Request 54 of 555: Fiskdale
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4936792
-    Request 55 of 555: San Luis
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3601932
-    Request 56 of 555: Kholzanovo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2022365
-    Request 57 of 555: Campanario
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6355893
-    Request 58 of 555: Emu Park
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2167333
-    Request 59 of 555: Innbygda
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3133819
-    Request 60 of 555: San Pietro Val Lemina
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6543787
-    Request 61 of 555: Bonilla de la Sierra
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3127839
-    Request 62 of 555: Ardeoani
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=686212
-    Request 63 of 555: Melle
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2872079
-    Request 64 of 555: Lapao
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3458817
-    Request 65 of 555: Coolac
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2170648
-    Request 66 of 555: Banjar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8143791
-    Request 67 of 555: Taszar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3044088
-    Request 68 of 555: Great Coates
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2648133
-    Request 69 of 555: Aqadyr
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1526274
-    Request 70 of 555: Kostryzhivka
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=704730
-    Request 71 of 555: Saint-Peray
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2977623
-    Request 72 of 555: Dichiseni
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=679428
-    Request 73 of 555: Lengronne
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3003119
-    Request 74 of 555: Copanatoyac
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3530254
-    Request 75 of 555: Luis Moya
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3997017
-    Request 76 of 555: Tschernitz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2820624
-    Request 77 of 555: Margate City
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4502904
-    Request 78 of 555: Saint-Jean-de-Gonville
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2979326
-    Request 79 of 555: Bickley
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2076674
-    Request 80 of 555: Luzzi
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6537671
-    Request 81 of 555: Quevedo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3652567
-    Request 82 of 555: Glebovo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=561278
-    Request 83 of 555: Richland Hills
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4722668
-    Request 84 of 555: Kamphaeng Saen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1610445
-    Request 85 of 555: Willow Tree
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2143536
-    Request 86 of 555: Bezirk Brugg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6458826
-    Request 87 of 555: Rothenburg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6549182
-    Request 88 of 555: Arrifana
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8011907
-    Request 89 of 555: Vouziers
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6453604
-    Request 90 of 555: Selagalas
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7335813
-    Request 91 of 555: MezÅ‘ssytanya
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3048096
-    Request 92 of 555: Naranjal
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3437689
-    Request 93 of 555: Haslingfield
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2647362
-    Request 94 of 555: Insingen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556843
-    Request 95 of 555: Darakert
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=823811
-    Request 96 of 555: Nossa Senhora do Socorro
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3456223
-    Request 97 of 555: Festubert
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3018591
-    Request 98 of 555: Orcutt
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5379609
-    Request 99 of 555: Parva
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=671311
-    Request 100 of 555: Helegiu
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=676262
-    Request 101 of 555: Sao Goncalo do Amarante
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3388713
-    Request 102 of 555: Cikadu
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7915091
-    Request 103 of 555: Potsdam
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7116850
-    Request 104 of 555: Ellhoft
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2930946
-    Request 105 of 555: State of Uttarakhand
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1444366
-    Request 106 of 555: Witsum
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2807395
-    Request 107 of 555: Fuentearmegil
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3121950
-    Request 108 of 555: Riola Sardo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2523613
-    Request 109 of 555: Cihaur
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7858500
-    Request 110 of 555: Gadung
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1713413
-    Request 111 of 555: Clairoix
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3024801
-    Request 112 of 555: Pedrola
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362891
-    Request 113 of 555: Dindori
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1272540
-    Request 114 of 555: Farasan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=106744
-    Request 115 of 555: Phonphisai
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7510984
-    Request 116 of 555: Miravet
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3116678
-    Request 117 of 555: Castello de Rugat
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2519751
-    Request 118 of 555: La Huelga
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2515869
-    Request 119 of 555: Redwood County
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5042847
-    Request 120 of 555: Agana Heights Village
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4043525
-    Request 121 of 555: Murshidabad
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1262412
-    Request 122 of 555: Hasselbach
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2909433
-    Request 123 of 555: East Syracuse
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5116079
-    Request 124 of 555: Perleberg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2854848
-    Request 125 of 555: Khantau
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1522714
-    Request 126 of 555: Opiyai
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=226975
-    Request 127 of 555: Caxito
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2242001
-    Request 128 of 555: Saowi
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1628692
-    Request 129 of 555: Maisonnettes
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2996588
-    Request 130 of 555: Umuquena
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3625732
-    Request 131 of 555: Ossi
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3171814
-    Request 132 of 555: Newquay
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2641589
-    Request 133 of 555: Touying
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1792485
-    Request 134 of 555: Bruges
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6614135
-    Request 135 of 555: Platten
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6554366
-    Request 136 of 555: Gross Bornecke
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2916942
-    Request 137 of 555: Canda
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535596
-    Request 138 of 555: Busquistar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2520697
-    Request 139 of 555: Fresno de Caracena
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3122036
-    Request 140 of 555: Winnipeg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6183235
-    Request 141 of 555: Debe Wielkie
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=773386
-    Request 142 of 555: Schmorda
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6550471
-    Request 143 of 555: Arganil
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8011757
-    Request 144 of 555: Nginda
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=183689
-    Request 145 of 555: Martos
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6358510
-    Request 146 of 555: Zhaopu
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6824158
-    Request 147 of 555: El Pescado
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4008636
-    Request 148 of 555: West Pensacola
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4177908
-    Request 149 of 555: Sankt Georgen am Walde
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7871067
-    Request 150 of 555: Dinant
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2799359
-    Request 151 of 555: Zolotnikovskaya Pustynâ€™
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=462197
-    Request 152 of 555: Carrick-on-Shannon
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2965727
-    Request 153 of 555: PÃ´rto Novo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3452702
-    Request 154 of 555: Itzstedt
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2895552
-    Request 155 of 555: Hauenstein
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6555324
-    Request 156 of 555: Waldport
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5758901
-    Request 157 of 555: PosÃ«lok Neftebazy
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6417711
-    Request 158 of 555: Atsimo-Andrefana
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7670913
-    Request 159 of 555: Aojiang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1916294
-    Request 160 of 555: Sizun
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6453937
-    Request 161 of 555: Forshaga
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2713971
-    Request 162 of 555: Nestelbach bei Graz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2770874
-    Request 163 of 555: Saint-Denis-de-Mailloc
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6427426
-    Request 164 of 555: Kishi
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2334327
-    Request 165 of 555: Safipur
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1257854
-    Request 166 of 555: Wonosari
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2002872
-    Request 167 of 555: Uchoa
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3445824
-    Request 168 of 555: Powiat pucki
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7530788
-    Request 169 of 555: Sami
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2412199
-    Request 170 of 555: Berg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2950749
-    Request 171 of 555: CÃ¢ndido GodÃ³i
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3467543
-    Request 172 of 555: Paterson
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5102466
-    Request 173 of 555: Snippeling
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2747046
-    Request 174 of 555: Dingalan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1714743
-    Request 175 of 555: Sicong
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8201761
-    Request 176 of 555: Winkelheim
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2807984
-    Request 177 of 555: Baakwoning
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6544755
-    Request 178 of 555: Ardara
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2966935
-    Request 179 of 555: Glushni
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7093847
-    Request 180 of 555: Grub
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2914661
-    Request 181 of 555: Vienne-en-Val
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6434754
-    Request 182 of 555: Neila
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3115508
-    Request 183 of 555: Chexbres
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285507
-    Request 184 of 555: Retzerheide
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2847951
-    Request 185 of 555: Hamilton
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5969782
-    Request 186 of 555: Epfenbach
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2929873
-    Request 187 of 555: Wasenstein
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2813801
-    Request 188 of 555: Diyag
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7927587
-    Request 189 of 555: Lebrija
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2515096
-    Request 190 of 555: Partapur
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1260232
-    Request 191 of 555: Villa di Briano
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535630
-    Request 192 of 555: Sanvordem
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1257316
-    Request 193 of 555: Cairo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4104031
-    Request 194 of 555: San JuliÃ¡n
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3110509
-    Request 195 of 555: Pandacaqui
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1695583
-    Request 196 of 555: Koppies
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=987875
-    Request 197 of 555: Riverside
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4405795
-    Request 198 of 555: Orero
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534384
-    Request 199 of 555: San AgustÃ­n Altamirano
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3519995
-    Request 200 of 555: Filacciano
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3177004
-    Request 201 of 555: Galmaarden
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2797851
-    Request 202 of 555: Fontenay-de-Bossery
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3017923
-    Request 203 of 555: Fuling
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1810980
-    Request 204 of 555: Kozle
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3094871
-    Request 205 of 555: Al Aliyah
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2473876
-    Request 206 of 555: ParaÃ­so do Sul
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3455093
-    Request 207 of 555: Mestna ObÄ�ina Ljubljana
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3239318
-    Request 208 of 555: Paducah
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4048662
-    Request 209 of 555: Halbweg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2911640
-    Request 210 of 555: Calabrez
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3127073
-    Request 211 of 555: Racovita
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=669323
-    Request 212 of 555: Santana de Cataguases
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3449950
-    Request 213 of 555: Quinquis
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2984671
-    Request 214 of 555: Leander
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4705708
-    Request 215 of 555: Hosingen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6693300
-    Request 216 of 555: Mount Sterling
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4245136
-    Request 217 of 555: San Julian
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3985797
-    Request 218 of 555: Montalbo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2513667
-    Request 219 of 555: Cherokee
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4851247
-    Request 220 of 555: Dimos Samos
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8133749
-    Request 221 of 555: MaradÃ©kdÅ±lÅ‘
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=717844
-    Request 222 of 555: Aroma
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=378502
-    Request 223 of 555: Vrbas
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3187297
-    Request 224 of 555: Herrera de los Navarros
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362814
-    Request 225 of 555: Emirdag
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=315621
-    Request 226 of 555: Muhradah
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=166742
-    Request 227 of 555: Yazykovo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=468483
-    Request 228 of 555: Masciago Primo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534399
-    Request 229 of 555: Buesaco
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3688266
-    Request 230 of 555: Malou
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1801330
-    Request 231 of 555: Yelovo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=467711
-    Request 232 of 555: Emperador
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6361982
-    Request 233 of 555: San Vito di Cadore
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3167182
-    Request 234 of 555: Burton upon Stather
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2654201
-    Request 235 of 555: Larena
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1707223
-    Request 236 of 555: Fraize
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3017400
-    Request 237 of 555: Kirawsk
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=627272
-    Request 238 of 555: Tongyuan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1792529
-    Request 239 of 555: Bassillac
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3034665
-    Request 240 of 555: Bredeweg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2758391
-    Request 241 of 555: Montemurlo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6541554
-    Request 242 of 555: DeBary
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4152926
-    Request 243 of 555: Vernet-la-Varenne
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2969818
-    Request 244 of 555: Palmer
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5871146
-    Request 245 of 555: Gosseldange
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2960531
-    Request 246 of 555: Marktbreit
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2873307
-    Request 247 of 555: Ciriza
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3124991
-    Request 248 of 555: Sanatoriy Krymsâ€™ke Prymorâ€�ya
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=703863
-    Request 249 of 555: Saint-Imier
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7287029
-    Request 250 of 555: Parentis-en-Born
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6433920
-    Request 251 of 555: Lindo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2694838
-    Request 252 of 555: Kulmbach
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2882588
-    Request 253 of 555: Cherveix-Cubas
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3025423
-    Request 254 of 555: RegiÃ£o AutÃ³noma da Madeira
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2593105
-    Request 255 of 555: SÃ­tio ParanÃ¡
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3969406
-    Request 256 of 555: Remmels
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6551907
-    Request 257 of 555: Sanhoane
+    Request 1 of 555: Szydlowiec
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=757178
+    Request 2 of 555: Bennhausen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2951024
+    Request 3 of 555: Mogosani
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=672955
+    Request 4 of 555: Hochfelden
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6291215
+    Request 5 of 555: Montiano
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3172700
+    Request 6 of 555: PrÃ©fecture de la Ouaka
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=236887
+    Request 7 of 555: Paiguano
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3877770
+    Request 8 of 555: Claviere
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3178550
+    Request 9 of 555: Thiel-sur-Acolin
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2972868
+    Request 10 of 555: Campti
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4318812
+    Request 11 of 555: Vailly-sur-Aisne
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2971169
+    Request 12 of 555: Auw
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2661663
+    Request 13 of 555: Pervorosiyskiy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1520196
+    Request 14 of 555: Kimiidera
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1859472
+    Request 15 of 555: Maler Kotla
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1264111
+    Request 16 of 555: Ausservillgraten
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2782118
+    Request 17 of 555: Jinqiao
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1924937
+    Request 18 of 555: Crown Heights
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5114252
+    Request 19 of 555: Lexington
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4475773
+    Request 20 of 555: Belance
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1725623
+    Request 21 of 555: Newtownstewart
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2641511
+    Request 22 of 555: Montferrat
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6451504
+    Request 23 of 555: Saint-Ã‰varzec
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6431042
+    Request 24 of 555: Ust-Ilimsk
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2013952
+    Request 25 of 555: Montmagny
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6612928
+    Request 26 of 555: Zacatelco
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3815392
+    Request 27 of 555: BelÃ©n
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3689002
+    Request 28 of 555: Poleto
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6459671
+    Request 29 of 555: Kurikka
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=650095
+    Request 30 of 555: Przyborow
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3087895
+    Request 31 of 555: Gemeente Tholen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2746350
+    Request 32 of 555: Wendelsheim
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2811296
+    Request 33 of 555: DÄ™bno
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7533158
+    Request 34 of 555: Desaignes
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3021550
+    Request 35 of 555: Airport Village
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4099141
+    Request 36 of 555: Keera
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2161732
+    Request 37 of 555: Baoshan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2038438
+    Request 38 of 555: Dishna
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=358115
+    Request 39 of 555: San Giorgio di Pesaro
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3168301
+    Request 40 of 555: Yatala
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2142409
+    Request 41 of 555: Subligny
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2973758
+    Request 42 of 555: Conscenti
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3172350
+    Request 43 of 555: Biloli
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1275601
+    Request 44 of 555: Hazlehurst
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4199778
+    Request 45 of 555: Brouqueyran
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3029872
+    Request 46 of 555: Locquirec
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2997947
+    Request 47 of 555: Ban Mae Wan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1119013
+    Request 48 of 555: Balintore
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2656575
+    Request 49 of 555: Landkreis Cham
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2940202
+    Request 50 of 555: Wiesenau
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2809285
+    Request 51 of 555: Ellern
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2930996
+    Request 52 of 555: Britz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2944028
+    Request 53 of 555: Arrondissement de Pau
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2988356
+    Request 54 of 555: Castellnovo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6356994
+    Request 55 of 555: Enterprise
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5503766
+    Request 56 of 555: North Melbourne
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7281804
+    Request 57 of 555: Mangrol
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1263752
+    Request 58 of 555: Farley
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2166856
+    Request 59 of 555: Tokh-Aul
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=823639
+    Request 60 of 555: Banjiang
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1917139
+    Request 61 of 555: Landkreis Altenburg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2957763
+    Request 62 of 555: Ohatchee
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4081197
+    Request 63 of 555: Gschnitz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3319569
+    Request 64 of 555: Anloo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2759746
+    Request 65 of 555: Charroux
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6615685
+    Request 66 of 555: Kamieniec Zabkowicki
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3096795
+    Request 67 of 555: Wingfield
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2633823
+    Request 68 of 555: Shadrikha
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6314508
+    Request 69 of 555: Contreras
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6356416
+    Request 70 of 555: Mocorito
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3995652
+    Request 71 of 555: Alhadas
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2743076
+    Request 72 of 555: Seen (Kreis 3) / Waldegg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6295131
+    Request 73 of 555: Taruma
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3446718
+    Request 74 of 555: Tonala
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3981369
+    Request 75 of 555: Silver Ridge
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4504131
+    Request 76 of 555: Vergigny
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2969926
+    Request 77 of 555: Bagamoyo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=161290
+    Request 78 of 555: Wendisch Priborn
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6548394
+    Request 79 of 555: Firenze
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3176959
+    Request 80 of 555: Waverly
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5014208
+    Request 81 of 555: Dudendorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2934739
+    Request 82 of 555: Predore
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3169872
+    Request 83 of 555: Nieder-Olm
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2863014
+    Request 84 of 555: â€˜AlÄ« al Aá¸©mad
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=99308
+    Request 85 of 555: Tukhkala
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=480608
+    Request 86 of 555: Saint-Hilaire-de-Loulay
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6445198
+    Request 87 of 555: Saint-Martin-de-Valgalgues
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2978325
+    Request 88 of 555: Waldsieversdorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6547616
+    Request 89 of 555: Ngroto
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7035853
+    Request 90 of 555: Johannis-Vorstadt
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2894754
+    Request 91 of 555: Leezen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6552115
+    Request 92 of 555: GroÃŸ SchwaÃŸ
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2915048
+    Request 93 of 555: Quarouble
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6438425
+    Request 94 of 555: Zhilploshchadka
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=463001
+    Request 95 of 555: Linstead Place
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5830426
+    Request 96 of 555: La Clarita
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3807669
+    Request 97 of 555: Departamento de San Ignacio
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3429014
+    Request 98 of 555: Dikson
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1507390
+    Request 99 of 555: St. Johns
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6324733
+    Request 100 of 555: Mohammadia
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2487293
+    Request 101 of 555: McDonough County
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4901622
+    Request 102 of 555: Joplin
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4392768
+    Request 103 of 555: Neitersen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2866576
+    Request 104 of 555: Markapur
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1263504
+    Request 105 of 555: Valliquerville
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2970901
+    Request 106 of 555: Bockholt
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2947328
+    Request 107 of 555: Ramgarh
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1258677
+    Request 108 of 555: Ivanovskoye
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=555171
+    Request 109 of 555: Saint-Etienne-du-Gres
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2980238
+    Request 110 of 555: Cipanggilingan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7912070
+    Request 111 of 555: Niederlindach
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2863156
+    Request 112 of 555: Burgau
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2941486
+    Request 113 of 555: Ogoomor
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2029735
+    Request 114 of 555: Britsum
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2758309
+    Request 115 of 555: Petrovskoye
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=509850
+    Request 116 of 555: Cerezo de Abajo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3125355
+    Request 117 of 555: Decherd
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4617668
+    Request 118 of 555: Ranzin
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2850403
+    Request 119 of 555: Nettersheim
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2866336
+    Request 120 of 555: Arzano
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3182765
+    Request 121 of 555: Hellstein
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2906761
+    Request 122 of 555: Eching
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2933800
+    Request 123 of 555: Morristown
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5238755
+    Request 124 of 555: Lackenbach
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7871603
+    Request 125 of 555: Great Bridgeford
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2648149
+    Request 126 of 555: Gastello
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2125626
+    Request 127 of 555: Tokombere
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2322021
+    Request 128 of 555: RÃ¡gol
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6355589
+    Request 129 of 555: Uttar Char Fasson
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1205481
+    Request 130 of 555: Illkirch-Graffenstaden
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6441162
+    Request 131 of 555: Midlothian
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4711156
+    Request 132 of 555: Nha Trang
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1572151
+    Request 133 of 555: Lodan Wetan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1637482
+    Request 134 of 555: Wiesenthau
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556796
+    Request 135 of 555: Pabbi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1168680
+    Request 136 of 555: Ad Dil
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=30788
+    Request 137 of 555: Wushan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7643670
+    Request 138 of 555: Balerna
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285140
+    Request 139 of 555: Rozhdestvenskiy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=817767
+    Request 140 of 555: Coristanco
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6357299
+    Request 141 of 555: Russkaya Polyana
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1493423
+    Request 142 of 555: Loket
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3071627
+    Request 143 of 555: Rio de Couros
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8014240
+    Request 144 of 555: Aramoho
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2193863
+    Request 145 of 555: Mendi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2090990
+    Request 146 of 555: Paltinoasa
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=671418
+    Request 147 of 555: Terriente
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3108132
+    Request 148 of 555: Long Beach
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5801520
+    Request 149 of 555: SÃ¼leymanlar Mahallesi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=749262
+    Request 150 of 555: Pfaffing
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7872166
+    Request 151 of 555: Ajofrin
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2522299
+    Request 152 of 555: Navalpino
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6357153
+    Request 153 of 555: Siquijor
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1686066
+    Request 154 of 555: Lockland
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4516931
+    Request 155 of 555: Ostermundigen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7286761
+    Request 156 of 555: Waidhofen an der Thaya
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7873049
+    Request 157 of 555: Ranipur
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1167142
+    Request 158 of 555: AltstÃ¤dter GÃ¤rten
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3232620
+    Request 159 of 555: Camana
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3945985
+    Request 160 of 555: Ansiedlung Mettenhof
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2955925
+    Request 161 of 555: Voskresenskiy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=804039
+    Request 162 of 555: Saint-Pierre-lÃ¨s-Nemours
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6443840
+    Request 163 of 555: Lachen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2660075
+    Request 164 of 555: San Giuliano Terme
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6538581
+    Request 165 of 555: Palackattumala
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7287889
+    Request 166 of 555: Butuan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1722186
+    Request 167 of 555: Santiz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360537
+    Request 168 of 555: South Shore
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4309076
+    Request 169 of 555: Qingshanhu
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1797782
+    Request 170 of 555: Rohrbach bei Mattersburg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7871577
+    Request 171 of 555: Boosaaso
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=64013
+    Request 172 of 555: Igbeti
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2338772
+    Request 173 of 555: Mojotoro
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3910203
+    Request 174 of 555: Gakhan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2024212
+    Request 175 of 555: Dautphe
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2938701
+    Request 176 of 555: Burnham
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5182434
+    Request 177 of 555: BÃ¼ÃŸfeld
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2940696
+    Request 178 of 555: Vizille
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6433469
+    Request 179 of 555: Ilskiy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=556951
+    Request 180 of 555: District de la Neuveville
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6458757
+    Request 181 of 555: Zweenfurth
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2803624
+    Request 182 of 555: Tambura
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=366444
+    Request 183 of 555: Leordeni
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=674885
+    Request 184 of 555: Annet-sur-Marne
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3037531
+    Request 185 of 555: BÃ¤retswil
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285155
+    Request 186 of 555: Niederdorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2863523
+    Request 187 of 555: Povegliano Veronese
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3170019
+    Request 188 of 555: Kamulan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7035314
+    Request 189 of 555: Schackendorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2840903
+    Request 190 of 555: Barberaz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3035033
+    Request 191 of 555: Tyntynder
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2145619
+    Request 192 of 555: Hancock County
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4258477
+    Request 193 of 555: Auriac
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3036034
+    Request 194 of 555: Saussan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2975741
+    Request 195 of 555: Anikin Pochinok
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=581756
+    Request 196 of 555: Petting
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556407
+    Request 197 of 555: Thurkow
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2822536
+    Request 198 of 555: Strzegom
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3084440
+    Request 199 of 555: Olmillos de Castro
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362575
+    Request 200 of 555: Le Bosc-Roger-en-Roumois
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3005182
+    Request 201 of 555: Dzyerawnaya
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=629092
+    Request 202 of 555: Bourg-de-Thizy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3031017
+    Request 203 of 555: Miremont
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2993726
+    Request 204 of 555: Lebushe
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=788543
+    Request 205 of 555: Tourais
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2733456
+    Request 206 of 555: Balatero
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1728382
+    Request 207 of 555: Bad Ischl
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7873133
+    Request 208 of 555: Papelon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3630826
+    Request 209 of 555: Novopokrovka
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=699328
+    Request 210 of 555: Rizal
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1691645
+    Request 211 of 555: Ortisoara
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=671676
+    Request 212 of 555: Steinhaus
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2658484
+    Request 213 of 555: KleinjÃ¶rl
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2888686
+    Request 214 of 555: Montemonaco
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3172830
+    Request 215 of 555: Taintrux
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6445760
+    Request 216 of 555: Carrigtwohill
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2965694
+    Request 217 of 555: FoixÃ 
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534058
+    Request 218 of 555: Dangstetten
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2939040
+    Request 219 of 555: Gisborne
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2206854
+    Request 220 of 555: Marcignago
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534983
+    Request 221 of 555: Watford District
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7290569
+    Request 222 of 555: Fall River County
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5764690
+    Request 223 of 555: Kostâ€™kovo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=543917
+    Request 224 of 555: Blizhniye Kamyshi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=712048
+    Request 225 of 555: Sailors Falls
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2150724
+    Request 226 of 555: Isla Verde
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3853643
+    Request 227 of 555: Tauberschallbach
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2823850
+    Request 228 of 555: Sankt Julian
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2841558
+    Request 229 of 555: Staraya Akkermanovka
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=583731
+    Request 230 of 555: Pleyber-Christ
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2986746
+    Request 231 of 555: Crucea
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=680092
+    Request 232 of 555: Dam Dam
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1272243
+    Request 233 of 555: Bani
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3512067
+    Request 234 of 555: Puertomingalvo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3112691
+    Request 235 of 555: Sosno
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3085134
+    Request 236 of 555: FÃ©lix
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2517748
+    Request 237 of 555: Miacatlan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3523247
+    Request 238 of 555: Petit BrÃ©sil
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3570186
+    Request 239 of 555: Mischendorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7872744
+    Request 240 of 555: Edling
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556359
+    Request 241 of 555: Ozvatan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=317970
+    Request 242 of 555: Sanhoane
     http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2734770
-    Request 258 of 555: Menzel
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2871876
-    Request 259 of 555: Kostromskaya Oblastâ€™
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=543871
-    Request 260 of 555: Mtakoudja
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1090583
-    Request 261 of 555: ChurÃ¡nov
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3077510
-    Request 262 of 555: Nabatiye et Tahta
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=278913
-    Request 263 of 555: Trikala
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=252664
-    Request 264 of 555: Gumpoldskirchen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7872977
-    Request 265 of 555: Pul-e Hisar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1464922
-    Request 266 of 555: Zavodsâ€™ke
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=687501
-    Request 267 of 555: Tongtianxiang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7328962
-    Request 268 of 555: Peresecina
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=617609
-    Request 269 of 555: Svetoch
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=485642
-    Request 270 of 555: Hiendelaencina
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6357916
-    Request 271 of 555: Gubbio
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6541111
-    Request 272 of 555: Kleinwelsbach
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2888018
-    Request 273 of 555: Wauchope
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2144332
-    Request 274 of 555: El Rincon
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3710040
-    Request 275 of 555: Asind
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1278278
-    Request 276 of 555: Ospedaletto dAlpinolo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3171830
-    Request 277 of 555: Saint-Hilaire-de-Clisson
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2979551
-    Request 278 of 555: Margaux
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6432295
-    Request 279 of 555: Chavannes-le-ChÃªne
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2661196
-    Request 280 of 555: Sinking Spring
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5212342
-    Request 281 of 555: Nortmoor
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2861807
-    Request 282 of 555: Pattukkottai
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1260040
-    Request 283 of 555: Sarfiraz Kala
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1127001
-    Request 284 of 555: Simoes
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3387625
-    Request 285 of 555: Obonoma
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2328185
-    Request 286 of 555: Chandler
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6943811
-    Request 287 of 555: Barraganyatti
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2176759
-    Request 288 of 555: Corral de Almaguer
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6361714
-    Request 289 of 555: Obshtina Boboshevo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=733152
-    Request 290 of 555: Teller
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5875969
-    Request 291 of 555: Lincoln Park
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4999311
-    Request 292 of 555: Benito
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5898322
-    Request 293 of 555: Druya
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=628871
-    Request 294 of 555: Green Cove Springs
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4157427
-    Request 295 of 555: Barpeta Road
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7302849
-    Request 296 of 555: Goldswil
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2660570
-    Request 297 of 555: Kutoanyar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7579605
-    Request 298 of 555: Saint-GenÃ¨s-la-Tourette
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6440184
-    Request 299 of 555: Ylistaro
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=630805
-    Request 300 of 555: Baraganul
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=685429
-    Request 301 of 555: NienstÃ¤dt
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2862540
-    Request 302 of 555: PorriÃ±o (O)
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360238
-    Request 303 of 555: Magor
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2643196
-    Request 304 of 555: DolÄ�lghÄ�t
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1283429
-    Request 305 of 555: Saint-Sulpice-de-Pommeray
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2976868
-    Request 306 of 555: Iles
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3680616
-    Request 307 of 555: Villamanrique de Tajo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6359392
-    Request 308 of 555: Peracense
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3113823
-    Request 309 of 555: ParbayÃ³n
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3114303
-    Request 310 of 555: Eisten
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285717
-    Request 311 of 555: Bangbayang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7857810
-    Request 312 of 555: Gorno Orizari
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=790319
-    Request 313 of 555: PÃ©rignat-lÃ¨s-SarliÃ¨ve
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6440128
-    Request 314 of 555: Finschhafen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2097418
-    Request 315 of 555: Westville
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5106350
-    Request 316 of 555: Adyge-Khabl
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=584221
-    Request 317 of 555: Somogy megye
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3045226
-    Request 318 of 555: Leyme
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2998698
-    Request 319 of 555: Kensington
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5088311
-    Request 320 of 555: Harrington Park
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5098842
-    Request 321 of 555: CervÃ£es
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8011347
-    Request 322 of 555: Karangpeton
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7406687
-    Request 323 of 555: Berzosa de Bureba
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3128100
-    Request 324 of 555: Heslington
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2647037
-    Request 325 of 555: Tingi
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=877384
-    Request 326 of 555: Tsibino
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=480907
-    Request 327 of 555: Tiurana
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3108059
-    Request 328 of 555: Kamas
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5776692
-    Request 329 of 555: Eschol
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2167233
-    Request 330 of 555: Wrixum
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6551636
-    Request 331 of 555: Tequixquiac
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3515794
-    Request 332 of 555: Spalene Porici
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3065560
-    Request 333 of 555: Eberholzen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2933994
-    Request 334 of 555: Athenree
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2193747
-    Request 335 of 555: Simacota
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3668023
-    Request 336 of 555: Cimarga
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8053092
-    Request 337 of 555: Castel Madama
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3179561
-    Request 338 of 555: Le Grand ChÃ¢tel
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3004021
-    Request 339 of 555: Pezilla-la-Riviere
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2987437
-    Request 340 of 555: Mittweida
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2870318
-    Request 341 of 555: Northern Ireland
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2641364
-    Request 342 of 555: Kriftel
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2883920
-    Request 343 of 555: Maruim
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3457582
-    Request 344 of 555: Paulhan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6432579
-    Request 345 of 555: Agde
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3038638
-    Request 346 of 555: Ouled Mimoun
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2484846
-    Request 347 of 555: Russ
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6441323
-    Request 348 of 555: Bicknell
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4254515
-    Request 349 of 555: Dmitriyevka
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=566029
-    Request 350 of 555: I-n-Alakam
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2443250
-    Request 351 of 555: Bono
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4102581
-    Request 352 of 555: Kreuzau
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6553056
-    Request 353 of 555: Vilar do Paraiso
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2732444
-    Request 354 of 555: Fusignano
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6536752
-    Request 355 of 555: Valdecarros
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360566
-    Request 356 of 555: Permatang Damar Laut
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1735071
-    Request 357 of 555: Bonbon
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1724165
-    Request 358 of 555: Ocean Grove
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4946160
-    Request 359 of 555: Bajanca
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2271217
-    Request 360 of 555: La Paz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1707343
-    Request 361 of 555: Topolovo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=726381
-    Request 362 of 555: Xinzhai
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1788493
-    Request 363 of 555: Illar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2516456
-    Request 364 of 555: Sebina
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=933117
-    Request 365 of 555: Gerlafingen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285905
-    Request 366 of 555: Gemeente Ommen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2749611
-    Request 367 of 555: Urexweiler
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2818213
-    Request 368 of 555: Corrales
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362498
-    Request 369 of 555: Laiz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3008628
-    Request 370 of 555: Mine de Bert
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2993815
-    Request 371 of 555: Villa Flores
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3514677
-    Request 372 of 555: Gemeente Zeist
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2743976
-    Request 373 of 555: Brothen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2943700
-    Request 374 of 555: Lamayou
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6440450
-    Request 375 of 555: San Jose Pinula
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3589977
-    Request 376 of 555: Ichinoseki
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2112656
-    Request 377 of 555: Coroico
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3919085
-    Request 378 of 555: Predejane
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=786806
-    Request 379 of 555: Christiana
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1013550
-    Request 380 of 555: Elxleben
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2930631
-    Request 381 of 555: MuquiÃ§aba
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3456507
-    Request 382 of 555: Pieve di Cento
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6538473
-    Request 383 of 555: Powiat Å‚omÅ¼yÅ„ski
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7530827
-    Request 384 of 555: Padina Mica
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=671550
-    Request 385 of 555: Powiat oÅ›wiÄ™cimski
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6690160
-    Request 386 of 555: Rocky Mountain House
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6126749
-    Request 387 of 555: Aceuchal
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6355868
-    Request 388 of 555: Saku
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=588831
-    Request 389 of 555: Leposaviq
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=788731
-    Request 390 of 555: Perama
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=255589
-    Request 391 of 555: BerlÃ­n
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3688889
-    Request 392 of 555: Alconchel de Ariza
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3130568
-    Request 393 of 555: Hainspitz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6550367
-    Request 394 of 555: ThÃ´nex
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7287304
-    Request 395 of 555: Bornholm
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2076021
-    Request 396 of 555: Nonnenberg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2862220
-    Request 397 of 555: NovosÃ«lki
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=518103
-    Request 398 of 555: Moguntia
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3070413
-    Request 399 of 555: Kursumlija
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=788852
-    Request 400 of 555: Castelltercol
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3125878
-    Request 401 of 555: Briedern
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2944142
-    Request 402 of 555: Badhni Kalan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1277992
-    Request 403 of 555: Tibanbang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1682421
-    Request 404 of 555: Goulds Country
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2164827
-    Request 405 of 555: Babakanjaya
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8069779
-    Request 406 of 555: Matararique
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1040039
-    Request 407 of 555: Havant District
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7290559
-    Request 408 of 555: Flueelen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2660751
-    Request 409 of 555: Nanyuemiao
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1928889
-    Request 410 of 555: OruÃ±a
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3114863
-    Request 411 of 555: Ponte de Sor
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6930677
-    Request 412 of 555: Kunwar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1265567
-    Request 413 of 555: PurbapÄ�ra
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1190716
-    Request 414 of 555: Ban Thung That
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1117328
-    Request 415 of 555: Jiantianjie
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1806141
-    Request 416 of 555: Prittriching
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556264
-    Request 417 of 555: GÃ¶cklingen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6555185
-    Request 418 of 555: Maru
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2330717
-    Request 419 of 555: Unterhub
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2819305
-    Request 420 of 555: Villacidro
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2522766
-    Request 421 of 555: Oseja de Sajambre
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3114843
-    Request 422 of 555: Kaisborstel
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2894048
-    Request 423 of 555: Pekalongan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1631766
-    Request 424 of 555: SÃ©by
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2975378
-    Request 425 of 555: Saint-Fraimbault
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2980086
-    Request 426 of 555: Ahlden
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2959237
-    Request 427 of 555: Vizal Santo Nino
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1679755
-    Request 428 of 555: Schrattenberg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7872967
-    Request 429 of 555: Narra
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1698103
-    Request 430 of 555: Bentarique
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6355543
-    Request 431 of 555: Dianbu
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1812949
-    Request 432 of 555: Charleroi
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2800481
-    Request 433 of 555: Reichelsheim
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2849197
-    Request 434 of 555: Corrales de Duero
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362184
-    Request 435 of 555: Verkh-Chebula
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1487599
-    Request 436 of 555: La Vale
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4360113
-    Request 437 of 555: Tilichiki
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2120591
-    Request 438 of 555: Olofstroem
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2687062
-    Request 439 of 555: Calera de Leon
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2520529
-    Request 440 of 555: Pomeroy
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5807169
-    Request 441 of 555: Kirburg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2890776
-    Request 442 of 555: Beberibe
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3405924
-    Request 443 of 555: PiÃ±ero
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3429959
-    Request 444 of 555: Perry County
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4521093
-    Request 445 of 555: Mediapolis
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4866845
-    Request 446 of 555: Juybar
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=129933
-    Request 447 of 555: Pirey
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6429939
-    Request 448 of 555: Wimpassing im Schwarzatale
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7871877
-    Request 449 of 555: Bad Hersfeld
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2953439
-    Request 450 of 555: Maxvorstadt
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6940468
-    Request 451 of 555: Ranies
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2850485
-    Request 452 of 555: Chancay
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3944399
-    Request 453 of 555: Vieux-Charmont
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6430047
-    Request 454 of 555: Saint-Martin-de-VillerÃ©al
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2978320
-    Request 455 of 555: Boundiali
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2290836
-    Request 456 of 555: Orvault
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6434487
-    Request 457 of 555: Politischer Bezirk Wiener Neustadt
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2761352
-    Request 458 of 555: San Giacomo Vercellese
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535431
-    Request 459 of 555: Oficina MarÃ­a Elena
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3878253
-    Request 460 of 555: Paulerspury
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2640562
-    Request 461 of 555: Ramos Arizpe
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3991043
-    Request 462 of 555: Tuebingen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2820860
-    Request 463 of 555: Hallerndorf
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2911491
-    Request 464 of 555: Kochang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1842859
-    Request 465 of 555: Rouvroy
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2982383
-    Request 466 of 555: Le Mesnil-Auzouf
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3003407
-    Request 467 of 555: Pilling
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2853720
-    Request 468 of 555: Ortkrug
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2856986
-    Request 469 of 555: Toccoa
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4226722
-    Request 470 of 555: Kodnitz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2886839
-    Request 471 of 555: Balahovit
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=616824
-    Request 472 of 555: Rozivka
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=690029
-    Request 473 of 555: Casas Altas
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3126078
-    Request 474 of 555: Patience Hill
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3573972
-    Request 475 of 555: Tenczynek
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3083410
-    Request 476 of 555: Slupno
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=758850
-    Request 477 of 555: Nova Dubnica
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3058496
-    Request 478 of 555: Ormelle
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3218409
-    Request 479 of 555: Lorica
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3676397
-    Request 480 of 555: Glendale
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5254404
-    Request 481 of 555: Labastida
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6355263
-    Request 482 of 555: Koprivshtitsa
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=730159
-    Request 483 of 555: Chaoyang
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7920235
-    Request 484 of 555: Mozhga
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=524700
-    Request 485 of 555: Achkasovo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=584301
-    Request 486 of 555: ItapÃ©
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3460759
-    Request 487 of 555: Peynier
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6447152
-    Request 488 of 555: Sieniawa
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=759301
-    Request 489 of 555: Schlieben
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2838547
-    Request 490 of 555: Somerset West
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6951112
-    Request 491 of 555: Brightview
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2174031
-    Request 492 of 555: Mamyri
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=529621
-    Request 493 of 555: Santa Maria Petapa
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3517220
-    Request 494 of 555: Tá»‰nh YÃªn BÃ¡i
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1559978
-    Request 495 of 555: Veruno
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535289
-    Request 496 of 555: Frumoasa
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=677890
-    Request 497 of 555: Bikramganj
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1275655
-    Request 498 of 555: Gerindote
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2517242
-    Request 499 of 555: Dosso del Liro
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535123
-    Request 500 of 555: Uxem
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2971272
-    Request 501 of 555: Spencerville
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5492633
-    Request 502 of 555: Ujungpangkah
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1622784
-    Request 503 of 555: Hekinan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1862912
-    Request 504 of 555: Germagno
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535559
-    Request 505 of 555: Miengo
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360690
-    Request 506 of 555: Pedrajas de San Esteban
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3114138
-    Request 507 of 555: Sheridan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4130821
-    Request 508 of 555: Breuil-le-Sec
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3030205
-    Request 509 of 555: Mouilleron-en-Pareds
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2991538
-    Request 510 of 555: Puspajati
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7406786
-    Request 511 of 555: Falcade
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3177263
-    Request 512 of 555: Giemetsberg
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2778589
-    Request 513 of 555: Camp de Masque
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=934661
-    Request 514 of 555: Pucangkrajan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8079872
-    Request 515 of 555: Oliveiras
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2737036
-    Request 516 of 555: Fairy Hill
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2166911
-    Request 517 of 555: San Eugenio
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1690100
-    Request 518 of 555: Patique
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1694396
-    Request 519 of 555: Weihenzell
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556856
-    Request 520 of 555: Mont Mado
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3237515
-    Request 521 of 555: Melbu
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3146160
-    Request 522 of 555: Azambuja
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2271337
-    Request 523 of 555: Driouch
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2550985
-    Request 524 of 555: Budakalasz
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3054651
-    Request 525 of 555: Tessin
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2823418
-    Request 526 of 555: RÄ�mgarh
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6989446
-    Request 527 of 555: Tretâ€™ya Rota
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=481725
-    Request 528 of 555: Lomagna
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3174623
-    Request 529 of 555: Heroldishausen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2905882
-    Request 530 of 555: Frauenwald
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6550201
-    Request 531 of 555: ArtiÃ©s
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3129311
-    Request 532 of 555: Belzec
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7576105
-    Request 533 of 555: Northwood
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5165069
-    Request 534 of 555: San Francisco Amatepe
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3583733
-    Request 535 of 555: Numbla Vale
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2154733
-    Request 536 of 555: Luhavaya Slabada
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=625853
-    Request 537 of 555: Mazamet
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2994902
-    Request 538 of 555: Lartigau
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3848890
-    Request 539 of 555: Biedesheim
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6554931
-    Request 540 of 555: Banjar Teguan
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7334114
-    Request 541 of 555: Erwin
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4621130
-    Request 542 of 555: Hamoir
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2796629
-    Request 543 of 555: Geist
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2921582
-    Request 544 of 555: Carvalho
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2741285
-    Request 545 of 555: Hartwell
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4199572
-    Request 546 of 555: Vallecas
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3106601
-    Request 547 of 555: Olhao
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2265447
-    Request 548 of 555: Lagow
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3093979
-    Request 549 of 555: Sarnen
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2658786
-    Request 550 of 555: Dittelbrunn
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6557054
-    Request 551 of 555: Becerril de la Sierra
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3128415
-    Request 552 of 555: Yellow Grass
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6185353
-    Request 553 of 555: Ouderkerk aan de Amstel
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2749017
-    Request 554 of 555: Markivka
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=701792
-    Request 555 of 555: Simnicu de Sus
-    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=667098
+    Request 243 of 555: Jingling
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1805619
+    Request 244 of 555: Leucate
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2999046
+    Request 245 of 555: Soisy-sur-Seine
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2974383
+    Request 246 of 555: Asteasu
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6358105
+    Request 247 of 555: Tanjung Timur
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7035669
+    Request 248 of 555: Gramastetten
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7873237
+    Request 249 of 555: Ilog
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1711030
+    Request 250 of 555: El Corrillo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3123531
+    Request 251 of 555: Saint-Mathurin
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2978198
+    Request 252 of 555: Coity
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2652622
+    Request 253 of 555: Maloluchinskoye
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=530675
+    Request 254 of 555: Ã–tinghausen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2856161
+    Request 255 of 555: Rabochiy PosÃ«lok
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=503308
+    Request 256 of 555: Plouguiel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6429077
+    Request 257 of 555: Lopera
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6358506
+    Request 258 of 555: Tres Cantos
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6359405
+    Request 259 of 555: Porcuna
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2512408
+    Request 260 of 555: Joniec
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=770028
+    Request 261 of 555: West Des Moines
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4881346
+    Request 262 of 555: Penikebon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7780520
+    Request 263 of 555: Tugurejo Satu
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8080017
+    Request 264 of 555: Radeburg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2851074
+    Request 265 of 555: Burra
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2075308
+    Request 266 of 555: Homestead
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4159050
+    Request 267 of 555: Izurtza
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3120221
+    Request 268 of 555: Kings Grant
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4474383
+    Request 269 of 555: SÃ£o GonÃ§alo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6322065
+    Request 270 of 555: Gata de Gorgos
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2517298
+    Request 271 of 555: Tuffe
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2971493
+    Request 272 of 555: Stirling
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6156822
+    Request 273 of 555: Gyovren
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=731100
+    Request 274 of 555: Kerman
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5362909
+    Request 275 of 555: Kiomboi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=157198
+    Request 276 of 555: Oulad Kerroum
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2569452
+    Request 277 of 555: Navarro
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3430457
+    Request 278 of 555: Villard-de-Lans
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6433456
+    Request 279 of 555: Sant Cugat del Valles
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3110718
+    Request 280 of 555: Benamocarra
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6359432
+    Request 281 of 555: Oberjettingen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2860134
+    Request 282 of 555: Xindian
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1789127
+    Request 283 of 555: Williamstown
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5242994
+    Request 284 of 555: Chirnogeni
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=682038
+    Request 285 of 555: Wajima
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1848976
+    Request 286 of 555: Burg auf Fehmarn
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2941496
+    Request 287 of 555: Huiyaozi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1672222
+    Request 288 of 555: San Felipe Pueblo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5489545
+    Request 289 of 555: Bereznik
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=577240
+    Request 290 of 555: Sturgeon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5214576
+    Request 291 of 555: Bohinjska Bistrica
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3203808
+    Request 292 of 555: Dakota Dunes
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5227180
+    Request 293 of 555: Shibata
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1852607
+    Request 294 of 555: Linnenbach
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2877039
+    Request 295 of 555: Boulon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6447229
+    Request 296 of 555: RosiÃ¨res
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6434398
+    Request 297 of 555: Kanungu District
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=448217
+    Request 298 of 555: Norderstapel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2862027
+    Request 299 of 555: San Martino Alfieri
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534857
+    Request 300 of 555: Partido de San AndrÃ©s de Giles
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3429308
+    Request 301 of 555: Hilal
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=312143
+    Request 302 of 555: Imeni Gazety Pravda
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=609835
+    Request 303 of 555: Cutterwil
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7670132
+    Request 304 of 555: Choreti
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3920422
+    Request 305 of 555: Ravensworth
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4781129
+    Request 306 of 555: Eldon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5947456
+    Request 307 of 555: Seroa
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8012796
+    Request 308 of 555: Moroeni
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=672847
+    Request 309 of 555: Crateus
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3401548
+    Request 310 of 555: Aberystwyth
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2657782
+    Request 311 of 555: Livada
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=674685
+    Request 312 of 555: Leninskiy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=536148
+    Request 313 of 555: Stallings
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4493186
+    Request 314 of 555: General Pacheco
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3433787
+    Request 315 of 555: Ripalta Guerina
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534610
+    Request 316 of 555: Union Park
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4176109
+    Request 317 of 555: Pavlovskoye
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=512008
+    Request 318 of 555: Puro Pinget
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1692360
+    Request 319 of 555: Gamut
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1713286
+    Request 320 of 555: Friesenegg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2779225
+    Request 321 of 555: Puerto Asis
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3671549
+    Request 322 of 555: Viniegra de Abajo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6359160
+    Request 323 of 555: Saint-Andre-le-Puy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2981718
+    Request 324 of 555: Dolgorukovo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=565611
+    Request 325 of 555: Norddorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2862131
+    Request 326 of 555: Saczow
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3086379
+    Request 327 of 555: Fiesch
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7285819
+    Request 328 of 555: KÃ¶nigswalde
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6548493
+    Request 329 of 555: Majia
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1910279
+    Request 330 of 555: Ferolles-Attilly
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3018675
+    Request 331 of 555: Halenkovice
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3075996
+    Request 332 of 555: Peenedamm
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2855093
+    Request 333 of 555: Nevern
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2641747
+    Request 334 of 555: Santiago
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3621520
+    Request 335 of 555: Taccipi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1625659
+    Request 336 of 555: Paderno Dugnano
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6542037
+    Request 337 of 555: Maryland
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4361885
+    Request 338 of 555: Eitelborn
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2931385
+    Request 339 of 555: Apensen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6552782
+    Request 340 of 555: Ryegate
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5675156
+    Request 341 of 555: Guteneck
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6556703
+    Request 342 of 555: Ranzo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534431
+    Request 343 of 555: Buturugeni
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=683132
+    Request 344 of 555: Corte Rusta
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3177969
+    Request 345 of 555: Graham
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4694420
+    Request 346 of 555: Buxy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3029350
+    Request 347 of 555: Sandweiler
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2960117
+    Request 348 of 555: Allington
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2657473
+    Request 349 of 555: Eldorado
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5947462
+    Request 350 of 555: Pezuls
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6613990
+    Request 351 of 555: BeÃŸlich
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2949786
+    Request 352 of 555: Arcade
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4180134
+    Request 353 of 555: Szczutowo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3083762
+    Request 354 of 555: Coronel Du Graty
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3860197
+    Request 355 of 555: Bischofrod
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2948301
+    Request 356 of 555: Palo Alto
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5380748
+    Request 357 of 555: Nunes
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8011629
+    Request 358 of 555: Kruckow
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6547839
+    Request 359 of 555: Valea Caselor
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=663849
+    Request 360 of 555: Ayutla
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3532506
+    Request 361 of 555: Srirampur
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1348562
+    Request 362 of 555: Midland
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5803357
+    Request 363 of 555: Avenue
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2177466
+    Request 364 of 555: Echem
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2933808
+    Request 365 of 555: Cortes de la Frontera
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2519198
+    Request 366 of 555: Durazno
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3442727
+    Request 367 of 555: Gondel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7035710
+    Request 368 of 555: Jawaharnagar
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1269125
+    Request 369 of 555: Tumcon Ilawod
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1680735
+    Request 370 of 555: Geyershaff
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2960545
+    Request 371 of 555: Ordes
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3114990
+    Request 372 of 555: Summit
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4912845
+    Request 373 of 555: Carndonagh
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2965761
+    Request 374 of 555: Departamento de Ã‘eembucÃº
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3437677
+    Request 375 of 555: Seaside Heights
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4504010
+    Request 376 of 555: Wayne City
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4252603
+    Request 377 of 555: SapÃ©
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3448098
+    Request 378 of 555: Eulowitz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2928415
+    Request 379 of 555: Graneros
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3854724
+    Request 380 of 555: Stenhamra
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2674209
+    Request 381 of 555: Caxton
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2653462
+    Request 382 of 555: Pulwama
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1259251
+    Request 383 of 555: Curbati
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3644656
+    Request 384 of 555: San Marcos La Laguna
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3589795
+    Request 385 of 555: Novoye Plato
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=795259
+    Request 386 of 555: Mission Hills
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5373650
+    Request 387 of 555: Wedmore
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2634618
+    Request 388 of 555: Bernitt
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6559256
+    Request 389 of 555: Gribanovskiy
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=558799
+    Request 390 of 555: Milles de la Polvorosa
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3116753
+    Request 391 of 555: Weden
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8074726
+    Request 392 of 555: Narvik
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3144987
+    Request 393 of 555: Pinsaguel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6431753
+    Request 394 of 555: Druzhkovka
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=616743
+    Request 395 of 555: Zuerich (Kreis 3)
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6295532
+    Request 396 of 555: Weischlitz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6548546
+    Request 397 of 555: Tinutulan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1681759
+    Request 398 of 555: Aldershot
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2657540
+    Request 399 of 555: Klein Veltheim
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2888087
+    Request 400 of 555: Provincia de Wele-Nzas
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2566983
+    Request 401 of 555: Saldana
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3111065
+    Request 402 of 555: Massiola
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6535733
+    Request 403 of 555: Buttlar
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6549866
+    Request 404 of 555: RÃ®ÅŸcova
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=617481
+    Request 405 of 555: North Plymouth
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4945707
+    Request 406 of 555: Kafr ad Dik
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=283385
+    Request 407 of 555: Warden
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5815020
+    Request 408 of 555: Baldramsdorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2782023
+    Request 409 of 555: Kaliandak
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1641978
+    Request 410 of 555: Sankt Leon-Rot
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3272456
+    Request 411 of 555: Boueni
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1090467
+    Request 412 of 555: Uhingen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2820407
+    Request 413 of 555: Linia
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3093394
+    Request 414 of 555: Khong Chiam
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1609784
+    Request 415 of 555: Malmesbury
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3364346
+    Request 416 of 555: As
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2725073
+    Request 417 of 555: Hujiamiao
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1910285
+    Request 418 of 555: Manadhoo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1337618
+    Request 419 of 555: Haraiya
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1270391
+    Request 420 of 555: Richards Landing
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6121946
+    Request 421 of 555: Harecastle
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2647488
+    Request 422 of 555: Bute
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2075256
+    Request 423 of 555: Sansimion
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=666946
+    Request 424 of 555: Budaors
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3054646
+    Request 425 of 555: Pachalum
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3591955
+    Request 426 of 555: Anglade
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3037638
+    Request 427 of 555: Hedeper
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2908379
+    Request 428 of 555: Keeseville
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5123173
+    Request 429 of 555: Sigetec
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3190918
+    Request 430 of 555: Noisy-le-Grand
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6451999
+    Request 431 of 555: San Juan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6621286
+    Request 432 of 555: Ashland
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4232953
+    Request 433 of 555: Kleinelbersdorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2889476
+    Request 434 of 555: Raasdorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2768171
+    Request 435 of 555: Carapegua
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3439167
+    Request 436 of 555: Departamento del Alto ParanÃ¡
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3439440
+    Request 437 of 555: Cortandone
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3177999
+    Request 438 of 555: Egetswil
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6291256
+    Request 439 of 555: Saint-Chaptes
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6431391
+    Request 440 of 555: Nitakloang
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7574291
+    Request 441 of 555: Berazinets
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=630223
+    Request 442 of 555: Pfaffhausen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2659213
+    Request 443 of 555: Rathmolyon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2961894
+    Request 444 of 555: San Pedro de Rozados
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360530
+    Request 445 of 555: Rathcore
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2961926
+    Request 446 of 555: Mateus Leme
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3457484
+    Request 447 of 555: JÃ¤msÃ¤
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=656084
+    Request 448 of 555: Beaumetz-les-Loges
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3034210
+    Request 449 of 555: Massamagrell
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2514066
+    Request 450 of 555: Rio de Loba
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2735116
+    Request 451 of 555: Kilmarnock
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4767723
+    Request 452 of 555: Kosigi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1266070
+    Request 453 of 555: Felben
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2779698
+    Request 454 of 555: Malie
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4035236
+    Request 455 of 555: Silver Lake
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4172971
+    Request 456 of 555: Neu Kuppritz
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2864653
+    Request 457 of 555: Province of Ascoli Piceno
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3182748
+    Request 458 of 555: Dhanbad
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1272979
+    Request 459 of 555: Lincroft
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5100498
+    Request 460 of 555: Mettmenstetten
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7286497
+    Request 461 of 555: Yugan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1785866
+    Request 462 of 555: GÃ¶senroth
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6553591
+    Request 463 of 555: Zadorino
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=465720
+    Request 464 of 555: Chevillon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3025318
+    Request 465 of 555: Maneadero
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3996737
+    Request 466 of 555: Edison
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5097529
+    Request 467 of 555: Sayda
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=281965
+    Request 468 of 555: Annette Island Reserve
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5844411
+    Request 469 of 555: Tappendorf
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6551926
+    Request 470 of 555: Morales
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3770718
+    Request 471 of 555: HÃ¡je
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3076027
+    Request 472 of 555: Gerlebogk
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2921075
+    Request 473 of 555: Schoos
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2960088
+    Request 474 of 555: Cazorla
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2519672
+    Request 475 of 555: Turquel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8012317
+    Request 476 of 555: Oberhausen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2860425
+    Request 477 of 555: Departamento de San Miguel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3428638
+    Request 478 of 555: Mironcillo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6355733
+    Request 479 of 555: Llangelynin
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7295214
+    Request 480 of 555: Underbool
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2145512
+    Request 481 of 555: Jettenbach
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2894926
+    Request 482 of 555: Khon Sawan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1609765
+    Request 483 of 555: Tarumizu
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1850589
+    Request 484 of 555: Mohall
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5690557
+    Request 485 of 555: Santo Domingo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1687738
+    Request 486 of 555: ParalÄ�khemundi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1260390
+    Request 487 of 555: Holiday Valley
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4514429
+    Request 488 of 555: Achi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3690549
+    Request 489 of 555: Wuguanyi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7408812
+    Request 490 of 555: Puyo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3652584
+    Request 491 of 555: Isieke
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2337148
+    Request 492 of 555: Cevico de la Torre
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360023
+    Request 493 of 555: Huayllas
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6621228
+    Request 494 of 555: Lloret de Vistalegre
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2514991
+    Request 495 of 555: Gnevkow
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6547824
+    Request 496 of 555: Mesnil-Clinchamps
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2994241
+    Request 497 of 555: Katsuyama
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1859765
+    Request 498 of 555: Kemnay
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5990689
+    Request 499 of 555: Kudat
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1736458
+    Request 500 of 555: Valle de Tabladillo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6360936
+    Request 501 of 555: Virudunagar
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1253113
+    Request 502 of 555: Talitay
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1683818
+    Request 503 of 555: Panindicuaro de la Reforma
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3993519
+    Request 504 of 555: Lahti
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=649374
+    Request 505 of 555: Siegburg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2832521
+    Request 506 of 555: Schwalmstadt
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2835345
+    Request 507 of 555: Carahue
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3896774
+    Request 508 of 555: San Pablo Etla
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3518132
+    Request 509 of 555: Morata de JalÃ³n
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6362862
+    Request 510 of 555: Gig Harbor
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5795440
+    Request 511 of 555: Nefedâ€™yevo
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=820072
+    Request 512 of 555: Tumiritinga
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3445950
+    Request 513 of 555: Dimos Orchomenos
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8133910
+    Request 514 of 555: Ravels
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2788313
+    Request 515 of 555: Villemolaque
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6441060
+    Request 516 of 555: Needingworth
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2641827
+    Request 517 of 555: Jalgaon
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1269407
+    Request 518 of 555: Yanta
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2001380
+    Request 519 of 555: BÄ›chovice
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3079617
+    Request 520 of 555: Patersberg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2855274
+    Request 521 of 555: Peapack
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=5102515
+    Request 522 of 555: Ambricourt
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3037889
+    Request 523 of 555: DÃ©partement de la Moselle
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2991627
+    Request 524 of 555: Trimstein
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7287335
+    Request 525 of 555: Canton de NeuchÃ¢tel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2659495
+    Request 526 of 555: Meihua
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6422366
+    Request 527 of 555: Bryan Village
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4184922
+    Request 528 of 555: Tsvitkove
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=691064
+    Request 529 of 555: Dauernheim
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2938726
+    Request 530 of 555: Bilaspur
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1275635
+    Request 531 of 555: Torre deBusi
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3165461
+    Request 532 of 555: Le Cateau-CambrÃ©sis
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3004835
+    Request 533 of 555: Norfolk
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4776222
+    Request 534 of 555: Novytsya
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=699746
+    Request 535 of 555: Hemby Bridge
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4470545
+    Request 536 of 555: Gran Alacant
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6697298
+    Request 537 of 555: Ahrenfeld
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2959098
+    Request 538 of 555: Wangelnstedt
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6552519
+    Request 539 of 555: Maesan
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=1636906
+    Request 540 of 555: Sykea
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=253908
+    Request 541 of 555: Beato
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=8012465
+    Request 542 of 555: Hennezel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6445596
+    Request 543 of 555: Ploemel
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6437334
+    Request 544 of 555: Sadler
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4406747
+    Request 545 of 555: Estado Amazonas
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3649302
+    Request 546 of 555: Las Carreras
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=3911815
+    Request 547 of 555: Sankt Katharinen
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6553535
+    Request 548 of 555: Calp
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2520496
+    Request 549 of 555: Grancona
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534656
+    Request 550 of 555: Salzburg
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=2766823
+    Request 551 of 555: Mingelchaur
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=585514
+    Request 552 of 555: Estado de Guanajuato
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=4005267
+    Request 553 of 555: Ashburton
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=7839659
+    Request 554 of 555: BesalÃº
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6534017
+    Request 555 of 555: Yolet
+    http://api.openweathermap.org/data/2.5/weather?APPID=xxxxx&units=imperial&id=6427683
     
 
 
@@ -1391,7 +1395,7 @@ plt.scatter(random_city_df['lat'], cool_cities, marker="o", facecolors='lightblu
 plt.scatter(random_city_df['lat'], cold_cities, marker="o", facecolors='darkblue', edgecolors="black", alpha=1)
 
 # Create a title, x label, and y label
-plt.title("City Latitude by Temperature (F\N{DEGREE SIGN})", fontsize=20, fontweight="bold")
+plt.title(f"City Latitude by Temperature (F\N{DEGREE SIGN})\n({date})", fontsize=20, fontweight="bold")
 plt.xlabel("Latitude", fontsize=14)
 plt.ylabel("Temperature (F\N{DEGREE SIGN})", fontsize=14)
 
@@ -1428,7 +1432,7 @@ plt.clf()
 plt.scatter(random_city_df['lat'], random_city_df['humidity'], marker="o", facecolors='aqua', edgecolors="black", alpha=1)
 
 # Create a title, x label, and y label
-plt.title("City Latitude by Humidity (%)", fontsize=20, fontweight="bold")
+plt.title(f"City Latitude by Humidity (%)\n({date})", fontsize=20, fontweight="bold")
 plt.xlabel("Latitude", fontsize=14)
 plt.ylabel("Humidity (%)", fontsize=14)
 
@@ -1477,7 +1481,7 @@ plt.legend((f'High (>{high_cloudiness}%)', f'Mid ({high_cloudiness}-{low_cloudin
             f'Low (<{low_cloudiness}%)'),loc='best', prop={'size': 14})
 
 # Create a title, x label, and y label
-plt.title("City Latitude by Cloudiness (%)", fontsize=20, fontweight="bold")
+plt.title(f"City Latitude by Cloudiness (%)\n({date})", fontsize=20, fontweight="bold")
 plt.xlabel("Latitude", fontsize=14)
 plt.ylabel("Cloudiness (%)", fontsize=14)
 
@@ -1510,7 +1514,7 @@ plt.clf()
 plt.scatter(random_city_df['lat'], random_city_df['windspeed'], marker="o", facecolors='red', edgecolors="black", alpha=1)
 
 # Create a title, x label, and y label
-plt.title("City Latitude by Wind Speed (mph)", fontsize=20, fontweight="bold")
+plt.title(f"City Latitude by Wind Speed (mph)\n({date})", fontsize=20, fontweight="bold")
 plt.xlabel("Latitude", fontsize=14)
 plt.ylabel("Wind Speed (mph)", fontsize=14)
 
